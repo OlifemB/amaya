@@ -1,0 +1,16 @@
+$fontFaces: (
+        futurabb: 'futurabb.ttf',
+        futuraBlackNarrow: 'FuturaBlackNarrow.ttf',
+        futuraRoundDemi: 'FuturaRoundDemi.ttf',
+);
+
+@each $name, $path in $fontFaces {
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/' + $path);
+  }
+
+  .#{$name} {
+    font-family: $name
+  }
+}
