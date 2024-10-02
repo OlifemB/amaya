@@ -9,9 +9,27 @@ body {
   width: 100vw;
   height: 100vh;
   flex: 1;
+  overflow: hidden;
 }
 
 :root {
   --black: black;
   --white: white;
+}
+
+.nuka-container{
+  height: 100%;
+}
+
+.nuka-overflow{
+  height: 100%;
+}
+
+.nuka-wrapper{
+  height: 100%;
+  width: 100%;
+}
+
+.nuka-slide-container{
+  height: 100%;
 }
