@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
         "paths": {
-            "@/*": ["src/*"]
+            "@/*": [
+                "src/*"
+            ]
         },
         "lib": [
             "dom",
@@ -21,13 +23,15 @@
         "isolatedModules": false,
         "jsx": "preserve",
         "incremental": true,
-        "baseUrl": "./src",
+        "baseUrl": "./src"
     },
     "includes": [
-        "src",
+        "./src",
         "./typings.ts"
     ],
     "exclude": [
+        "./plugins/**/*",
+        "./typings/**/*",
         "node_modules",
         "build"
     ]
