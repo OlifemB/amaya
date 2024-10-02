@@ -47,7 +47,7 @@ export function Main() {
                 </div>
 
                 <div id={'description_footer'} className={'flex flex-row gap-8 pt-[14px] pb-[20px]'}>
-                    {[{ title: 'termsOfUse.title' }, { title: 'privacyPolicy.title' }].map((item, index) => (
+                    {[{ title: 'termsOfUse.title' }, { title: 'privacyPolicy.title' }].map(item => (
                         <BtnLink key={item.title} {...item} />
                     ))}
                 </div>

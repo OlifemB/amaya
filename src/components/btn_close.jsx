@@ -13,5 +13,9 @@ export const BtnClose = () => {
         console.log('window closed ' + close)
     }, [close])
 
-    return <IconClose className={'fixed top-4 right-4 z-[100]'} onClick={handleClickClose} />
+    return (
+        <button className={'fixed top-4 right-4 z-[100]'}>
+            <IconClose onClick={handleClickClose} />
+        </button>
+    )
 }
