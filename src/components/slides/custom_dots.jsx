@@ -6,7 +6,9 @@ export const CustomDots = () => {
     const { totalPages, currentPage, goToPage } = useCarousel()
 
     return (
-        <div className={'absolute w-full  bottom-[50px] flex items-center justify-center gap-1'}>
+        <div
+            className={'absolute w-full min-[540px]:bottom-[60px] bottom-[12vw] flex items-center justify-center gap-1'}
+        >
             {[...Array(totalPages)].map((_, index) => (
                 <button
                     key={'CustomDots' + index}
