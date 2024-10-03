@@ -16,7 +16,7 @@ export const Slides = () => {
             autoplay={true}
             autoplayInterval={3000}
             wrapMode={'wrap'}
-            swiping={true}
+            swiping={false}
             dots={<CustomDots />}
         >
             {slides.map((item, index) => (
