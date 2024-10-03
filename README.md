@@ -1,4 +1,4 @@
-#  Olifem
+#  Amaya test app
 ```
 git clone https://github.com/OlifemB/amaya.git
 npm install
