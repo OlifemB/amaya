@@ -8,12 +8,15 @@ export const BtnUnlim = () => {
         console.log('Button unlim clicked')
     }
     return (
-        <button
-            onClick={handleClick}
-            className={
-                'flex flex-col w-full items-center justify-center flex-1 rounded-2xl bg-main text-white py-[9px] futurabb text-[18px]'
-            }
-        >
+        // <button
+        //     onClick={handleClick}
+        //     className={
+        //         'flex flex-col w-full items-center justify-center flex-1 rounded-2xl bg-main text-white py-[9px] futurabb text-[18px]'
+        //     }
+        // >
+        //     {t('btnUnlim.title')}
+        // </button>
+        <button onClick={handleClick} className={'btn btn_small title bg-main text-white futurabb border-0'}>
             {t('btnUnlim.title')}
         </button>
     )

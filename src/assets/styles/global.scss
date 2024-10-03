@@ -10,6 +10,7 @@ body {
   height: 100vh;
   flex: 1;
   overflow: hidden;
+  background: #DDD;
 }
 
 :root {
@@ -17,19 +18,215 @@ body {
   --white: white;
 }
 
-.nuka-container{
+.nuka-container {
   height: 100%;
 }
 
-.nuka-overflow{
+.nuka-overflow {
   height: 100%;
 }
 
-.nuka-wrapper{
+.nuka-wrapper {
   height: 100%;
   width: 100%;
 }
 
-.nuka-slide-container{
+.nuka-slide-container {
   height: 100%;
+}
+
+.btn {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+$vps: calc((1vh + 1vw) / 2);
+
+#main {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'futuraRoundDemi', serif;
+}
+
+#carousel {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#description {
+  flex: 1 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 0 5vh;
+  gap: 1vh;
+}
+
+#description_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+#description_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+#description_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vh;
+}
+
+#description_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6vh;
+}
+
+.title {
+  font-size: calc(1vh * 1.3)
+}
+
+.subtitle {
+  font-size: calc(1vh * 1);
+}
+
+.description {
+  font-size: calc(1vh * 0.72);
+}
+
+.text {
+  font-size: calc(1vh * 1.13);
+}
+
+.btn {
+  border-width: 0.3vh;
+  width: 100%;
+  border-radius: 3vh;
+
+  &_big {
+    height: 8.2vh;
+  }
+
+  &_small {
+    padding: 1vh;
+  }
+}
+
+.title {
+  font-size: calc(1vh * 1.3)
+}
+
+.subtitle {
+  font-size: calc(1vh * 1);
+}
+
+.description {
+  font-size: calc(1vh * 0.72);
+}
+
+.text {
+  font-size: calc(1vh * 1.13);
+}
+@media (orientation: landscape) {
+ body{
+   display: none;
+ }
+}
+
+@media (orientation: portrait) {
+  body {
+    background: blue;
+    //font-size: 2vh;
+  }
+
+  .title {
+    font-size: 2.1vh;
+  }
+
+  .subtitle {
+    font-size: 1.65vh;
+  }
+
+  .description {
+    font-size: 1.2vh;
+  }
+
+  .text {
+    font-size: 1.9vh;
+  }
+
+  .btn {
+    border-width: 3px;
+    width: 100%;
+
+    &_big {
+      height: 8.3vh;
+      border-radius: calc($vps * 3)
+    }
+
+    &_small {
+      padding: calc(1vh * 0.5);
+      border-radius: calc(1vh * 3);
+    }
+  }
+
+  #logo {
+    width: 100%;
+    max-width: 240px;
+    z-index: 10;
+  }
+
+  #sale{
+    width: calc($vps * 8)
+  }
+
+  #main {
+    flex-direction: column;
+  }
+  #description {
+    padding: 0 5vh;
+  }
+  #description_header {
+    width: 100%;
+    max-width: 24vh;
+    gap: calc(1vh * 0.5);
+  }
+  #description_body {
+    max-width: 500px;
+    gap: calc($vps * 1.5);
+  }
+  #description_info {
+    gap: calc($vps * 0.8);
+  }
+  #description_footer {
+    max-width: 500px;
+    gap: calc(1vh * 4);
+    padding-bottom: calc(1vh * 1.2);
+  }
 }

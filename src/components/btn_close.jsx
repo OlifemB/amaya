@@ -14,7 +14,7 @@ export const BtnClose = () => {
     }, [close])
 
     return (
-        <button className={'fixed top-4 right-4 z-[100]'}>
+        <button className={'absolute top-4 right-4 z-[100]'}>
             <IconClose onClick={handleClickClose} />
         </button>
     )
