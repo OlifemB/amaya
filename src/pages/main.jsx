@@ -2,19 +2,28 @@ import LogAmaya from '@/assets/images/logo.png'
 import background from '@/assets/images/bg1.png'
 import Cloud from '@/assets/vectors/cloud.svg?react'
 import { Slides } from '@/components/slides/slides.jsx'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BtnClose } from '@/components/btn_close.jsx'
 import { BtnAnnual } from '@/components/btn_annual.jsx'
 import { BtnMonth } from '@/components/btn_month'
 import { BtnUnlim } from '@/components/btn_unlim.jsx'
 import { BtnLink } from '@/components/btn_link.jsx'
+import { Loading } from '@/components/loading.jsx'
 
 export function Main() {
     const { t } = useTranslation()
 
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 3300)
+    }, [])
+    if (loading) {
+        return <Loading />
+    }
+
     return (
-        <main id={'main'}>
+        <>
             <section id={'carousel'} style={{ backgroundImage: `url(${background})` }}>
                 <Slides />
             </section>
@@ -49,6 +58,6 @@ export function Main() {
             </section>
 
             <BtnClose />
-        </main>
+        </>
     )
 }
